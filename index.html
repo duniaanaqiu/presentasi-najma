@@ -8,64 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg:#f8fafc;
-      --card:#ffffff;
-      --ink:#0f172a;
-      --muted:#475569;
-      --accent:#2563eb;
-      --ring:#93c5fd;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%;}
-    body{
-      margin:0; font-family:"Plus Jakarta Sans",system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
-      color:var(--ink); background:linear-gradient(180deg,#f8fafc,#eef2ff); overflow:hidden;
-    }
-    .app{display:grid; grid-template-rows:auto 1fr auto; height:100%;}
-    header{
-      display:flex; align-items:center; justify-content:space-between; gap:12px;
-      padding:14px 18px; backdrop-filter:saturate(1.2) blur(6px);
-      background:rgba(255,255,255,.7); border-bottom:1px solid rgba(15,23,42,.06);
-      position:sticky; top:0; z-index:50;
-    }
-    .brand{display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.2px}
-    .brand .dot{width:10px;height:10px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 6px rgba(37,99,235,.15)}
-    .toolbar{display:flex; gap:8px; align-items:center}
-    button, .ghost{
-      appearance:none; border:0; border-radius:16px; padding:10px 14px; font-weight:600; cursor:pointer;
-      background:var(--ink); color:#fff; box-shadow:0 6px 16px rgba(15,23,42,.15);
-      transition:.2s transform ease, .2s opacity ease, .2s background ease;
-    }
-    button:active{transform:translateY(1px)}
-    .ghost{background:#fff;color:var(--ink); border:1px solid rgba(15,23,42,.08)}
-    .muted{color:var(--muted)}
-    main{height:100%; position:relative; overflow:hidden}
-    .stage{position:absolute; inset:0; display:grid; place-items:center; padding:18px}
-    .slide{
-      width:min(1100px,96vw); height:min(640px,86vh);
-      background:var(--card); border-radius:28px; padding:28px; display:grid;
-      grid-template-columns: 1.2fr 1fr; gap:24px; box-shadow:0 40px 80px rgba(15,23,42,.15);
-      opacity:0; transform:translateY(16px) scale(.98); transition:.45s ease;
-    }
-    .slide.active{opacity:1; transform:translateY(0) scale(1)}
-    .left{display:flex; flex-direction:column; gap:14px;}
-    .title{font-weight:800; font-size:clamp(22px,3.2vw,36px); letter-spacing:.3px}
-    .bullets{display:flex; flex-direction:column; gap:10px; font-size:clamp(14px,2.2vw,20px);}
-    .bullets li{margin-left:1.2em}
-    .note{font-size:clamp(12px,1.8vw,16px)}
-    .tag{display:inline-flex; align-items:center; gap:8px; padding:6px 10px; border-radius:999px; background:#eef2ff; color:#3730a3; font-weight:700; width:max-content}
-    .imgwrap{position:relative; border-radius:24px; overflow:hidden; background:#eef2ff; display:grid; place-items:center}
-    .imgwrap img{width:100%; height:100%; object-fit:cover}
-    footer{display:flex; align-items:center; justify-content:space-between; padding:12px 18px; gap:10px}
-    .progress{height:8px; flex:1; background:rgba(15,23,42,.08); border-radius:999px; overflow:hidden}
-    .progress .bar{height:100%; background:var(--accent); width:0%}
-    @media (max-width:900px){
-      .slide{grid-template-columns:1fr; height:86vh}
-      .imgwrap{order:-1; height:40vh}
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="app">
@@ -79,21 +22,25 @@
 
     <main>
       <div class="stage" id="stage">
-
-        <section class="slide active">
+        
+        <!-- Slide 1 -->
+        <section class="slide active" data-pos="right">
           <div class="left">
             <div class="tag">Slide 1 · Pembukaan</div>
             <h1 class="title">Pengamalan Butir Pancasila pada <br/> Kegiatan Presentasi Ini!</h1>
             <ul class="bullets">
               <li>Bismillāhir-raḥmānir-raḥīm · السلام عليكم ورحمة الله وبركاته</li>
               <li>Bukan anak SD IT Bina Insan Kamil kalau tidak berpikir out of the box</li>
-              <li>Hari ini kita membedah Pancasila di momen presentasi ini</li>
+              <li>Hari ini kita membedah Pancasila di momen presentasi ini, sekarang juga</li>
             </ul>
           </div>
-          <div class="imgwrap"><img src="images/slide1.png" alt="Slide 1"></div>
+          <div class="imgwrap">
+            <img src="images/slide1.png" alt="Najma membuka presentasi">
+          </div>
         </section>
 
-        <section class="slide">
+        <!-- Slide 2 -->
+        <section class="slide" data-pos="center">
           <div class="left">
             <div class="tag">Slide 2 · Hook</div>
             <h2 class="title">Out of the Box</h2>
@@ -103,10 +50,13 @@
               <li>那我们开始吧 · Nà wǒmen kāishǐ ba · Mari kita mulai</li>
             </ul>
           </div>
-          <div class="imgwrap"><img src="images/slide2.png" alt="Slide 2"></div>
+          <div class="imgwrap">
+            <img src="images/slide2.png" alt="Ide kreatif">
+          </div>
         </section>
 
-        <section class="slide">
+        <!-- Slide 3 -->
+        <section class="slide" data-pos="left">
           <div class="left">
             <div class="tag">Slide 3 · Sila 1</div>
             <h2 class="title">Sila Pertama · Ketuhanan Yang Maha Esa</h2>
@@ -116,10 +66,13 @@
               <li>Menjaga adab Islami selama berbicara</li>
             </ul>
           </div>
-          <div class="imgwrap"><img src="images/slide3.png" alt="Slide 3"></div>
+          <div class="imgwrap">
+            <img src="images/slide3.png" alt="Sila 1">
+          </div>
         </section>
 
-        <section class="slide">
+        <!-- Slide 4 -->
+        <section class="slide" data-pos="right">
           <div class="left">
             <div class="tag">Slide 4 · Sila 2</div>
             <h2 class="title">Sila Kedua · Kemanusiaan yang Adil dan Beradab</h2>
@@ -129,10 +82,13 @@
               <li>Menghargai pendapat ustadzah dan teman</li>
             </ul>
           </div>
-          <div class="imgwrap"><img src="images/slide4.png" alt="Slide 4"></div>
+          <div class="imgwrap">
+            <img src="images/slide4.png" alt="Sila 2">
+          </div>
         </section>
 
-        <section class="slide">
+        <!-- Slide 5 -->
+        <section class="slide" data-pos="left">
           <div class="left">
             <div class="tag">Slide 5 · Sila 3</div>
             <h2 class="title">Sila Ketiga · Persatuan Indonesia</h2>
@@ -142,10 +98,13 @@
               <li>Bangga menyebut sekolah: SD IT Bina Insan Kamil</li>
             </ul>
           </div>
-          <div class="imgwrap"><img src="images/slide5.png" alt="Slide 5"></div>
+          <div class="imgwrap">
+            <img src="images/slide5.png" alt="Sila 3">
+          </div>
         </section>
 
-        <section class="slide">
+        <!-- Slide 6 -->
+        <section class="slide" data-pos="right">
           <div class="left">
             <div class="tag">Slide 6 · Sila 4</div>
             <h2 class="title">Sila Keempat · Kerakyatan & Musyawarah</h2>
@@ -155,10 +114,13 @@
               <li>Mematuhi giliran presentasi sesuai aturan</li>
             </ul>
           </div>
-          <div class="imgwrap"><img src="images/slide6.png" alt="Slide 6"></div>
+          <div class="imgwrap">
+            <img src="images/slide6.png" alt="Sila 4">
+          </div>
         </section>
 
-        <section class="slide">
+        <!-- Slide 7 -->
+        <section class="slide" data-pos="left">
           <div class="left">
             <div class="tag">Slide 7 · Sila 5</div>
             <h2 class="title">Sila Kelima · Keadilan Sosial</h2>
@@ -168,10 +130,13 @@
               <li>Atur waktu bicara secara adil</li>
             </ul>
           </div>
-          <div class="imgwrap"><img src="images/slide7.png" alt="Slide 7"></div>
+          <div class="imgwrap">
+            <img src="images/slide7.png" alt="Sila 5">
+          </div>
         </section>
 
-        <section class="slide">
+        <!-- Slide 8 -->
+        <section class="slide" data-pos="center">
           <div class="left">
             <div class="tag">Slide 8 · Kesimpulan</div>
             <h2 class="title">Presentasi = Mengamalkan Pancasila</h2>
@@ -181,10 +146,13 @@
               <li>Pancasila bukan hanya dihafal, tapi diamalkan</li>
             </ul>
           </div>
-          <div class="imgwrap"><img src="images/slide8.png" alt="Slide 8"></div>
+          <div class="imgwrap">
+            <img src="images/slide8.png" alt="Kesimpulan">
+          </div>
         </section>
 
-        <section class="slide">
+        <!-- Slide 9 -->
+        <section class="slide" data-pos="right">
           <div class="left">
             <div class="tag">Slide 9 · Penutup</div>
             <h2 class="title">Terima kasih</h2>
@@ -194,7 +162,9 @@
               <li class="note">Bahasa utama: Indonesia → Pengamalan butir Persatuan Indonesia</li>
             </ul>
           </div>
-          <div class="imgwrap"><img src="images/slide9.png" alt="Slide 9"></div>
+          <div class="imgwrap">
+            <img src="images/slide9.png" alt="Penutup">
+          </div>
         </section>
 
       </div>
@@ -206,42 +176,6 @@
     </footer>
   </div>
 
-  <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const slides = Array.from(document.querySelectorAll('.slide'));
-    const next = document.getElementById('btnNext');
-    const prev = document.getElementById('btnPrev');
-    const bar  = document.getElementById('bar');
-    const counter = document.getElementById('counter');
-    let i = 0;
-
-    function show(idx){
-      i = Math.max(0, Math.min(slides.length-1, idx));
-      slides.forEach((s, n)=>{
-        s.classList.toggle('active', n===i);
-      });
-      const pct = ((i+1)/slides.length)*100;
-      bar.style.width = pct + '%';
-      counter.textContent = (i+1) + ' / ' + slides.length;
-    }
-
-    next.addEventListener('click', ()=>show(i+1));
-    prev.addEventListener('click', ()=>show(i-1));
-
-    window.addEventListener('keydown', (e)=>{
-      if(e.key==='ArrowRight' || e.key==='PageDown' || e.key===' '){e.preventDefault(); show(i+1)}
-      if(e.key==='ArrowLeft'  || e.key==='PageUp'  || e.key==='Backspace'){e.preventDefault(); show(i-1)}
-    });
-
-    let sx=0, dx=0; const stage = document.getElementById('stage');
-    stage.addEventListener('touchstart', (e)=>{sx = e.touches[0].clientX});
-    stage.addEventListener('touchmove',  (e)=>{dx = e.touches[0].clientX - sx});
-    stage.addEventListener('touchend',   ()=>{ if(Math.abs(dx)>40){ dx<0?show(i+1):show(i-1) } dx=0 });
-
-    const params = new URLSearchParams(location.search);
-    const start = parseInt(params.get('s')||'1',10);
-    if(!isNaN(start)) show(start-1);
-  });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>

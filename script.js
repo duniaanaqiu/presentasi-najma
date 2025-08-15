@@ -6,10 +6,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const counter = document.getElementById('counter');
   let i = 0;
 
+  console.log("Total slides found:", slides.length); // Debug jumlah slide
+
   function show(idx) {
-    console.log("Showing slide index:", idx); // Debug log
+    console.log("Showing slide index:", idx); // Debug indeks
     i = Math.max(0, Math.min(slides.length - 1, idx));
     slides.forEach((s, n) => {
+      console.log(`Slide ${n + 1} active: ${n === i}`); // Debug status active
       s.classList.toggle('active', n === i);
     });
     const pct = ((i + 1) / slides.length) * 100;
@@ -17,18 +20,17 @@ document.addEventListener("DOMContentLoaded", () => {
     counter.textContent = (i + 1) + ' / ' + slides.length;
   }
 
-  // Ensure buttons exist before adding event listeners
   if (next && prev) {
     next.addEventListener('click', () => {
-      console.log("Next button clicked"); // Debug log
+      console.log("Next button clicked");
       show(i + 1);
     });
     prev.addEventListener('click', () => {
-      console.log("Prev button clicked"); // Debug log
+      console.log("Prev button clicked");
       show(i - 1);
     });
   } else {
-    console.error("Buttons not found in DOM"); // Debug error
+    console.error("Buttons not found in DOM");
   }
 
   window.addEventListener('keydown', (e) => {
@@ -42,7 +44,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Touch swipe support
   let sx = 0, dx = 0;
   const stage = document.getElementById('stage');
   if (stage) {
@@ -54,7 +55,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Deep link support (?s=1..9)
   const params = new URLSearchParams(location.search);
   const start = parseInt(params.get('s') || '1', 10);
   if (!isNaN(start)) show(start - 1);

@@ -111,11 +111,13 @@ main {
   opacity: 0;
   transform: translateY(16px) scale(0.98);
   transition: 0.45s ease;
+  visibility: hidden; /* Tambahan untuk memastikan slide tersembunyi dengan benar */
 }
 
 .slide.active {
   opacity: 1;
   transform: translateY(0) scale(1);
+  visibility: visible; /* Pastikan slide aktif terlihat */
 }
 
 .left {

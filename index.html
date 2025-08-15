@@ -20,7 +20,7 @@
     *{box-sizing:border-box}
     html,body{height:100%;}
     body{
-      margin:0; font-family:"Plus Jakarta Sans",system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
+      margin:0; font-family:"Plus Jakarta Sans",system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell, Noto Sans, sans-serif;
       color:var(--ink); background:linear-gradient(180deg,#f8fafc,#eef2ff); overflow:hidden;
     }
     .app{display:grid; grid-template-rows:auto 1fr auto; height:100%;}
@@ -54,11 +54,9 @@
     .title{font-weight:800; font-size:clamp(22px,3.2vw,36px); letter-spacing:.3px}
     .bullets{display:flex; flex-direction:column; gap:10px; font-size:clamp(14px,2.2vw,20px);}
     .bullets li{margin-left:1.2em}
-    .note{font-size:clamp(12px,1.8vw,16px)}
     .tag{display:inline-flex; align-items:center; gap:8px; padding:6px 10px; border-radius:999px; background:#eef2ff; color:#3730a3; font-weight:700; width:max-content}
     .imgwrap{position:relative; border-radius:24px; overflow:hidden; background:#eef2ff; display:grid; place-items:center}
     .imgwrap img{width:100%; height:100%; object-fit:cover}
-    .imgcap{position:absolute; left:12px; bottom:12px; background:rgba(0,0,0,.55); color:#fff; padding:6px 10px; border-radius:12px; font-size:12px}
     footer{display:flex; align-items:center; justify-content:space-between; padding:12px 18px; gap:10px}
     .progress{height:8px; flex:1; background:rgba(15,23,42,.08); border-radius:999px; overflow:hidden}
     .progress .bar{height:100%; background:var(--accent); width:0%}
@@ -73,16 +71,14 @@
     <header>
       <div class="brand"><span class="dot"></span> Najma – Presentasi Pancasila</div>
       <div class="toolbar">
-        <button id="btnPrev" class="ghost" aria-label="Sebelumnya">← Sebelumnya</button>
-        <button id="btnNext" aria-label="Berikutnya">Berikutnya →</button>
+        <button id="btnPrev" class="ghost">← Sebelumnya</button>
+        <button id="btnNext">Berikutnya →</button>
       </div>
     </header>
 
     <main>
       <div class="stage" id="stage">
-        
-        <!-- Slide 1 -->
-        <section class="slide active" data-pos="right">
+        <section class="slide active">
           <div class="left">
             <div class="tag">Slide 1 · Pembukaan</div>
             <h1 class="title">Pengamalan Butir Pancasila pada <br/> Kegiatan Presentasi Ini!</h1>
@@ -91,150 +87,131 @@
               <li>Bukan anak SD IT Bina Insan Kamil kalau tidak berpikir out of the box</li>
               <li>Hari ini kita membedah Pancasila di momen presentasi ini, sekarang juga</li>
             </ul>
-            <div class="note muted">Tekan panah kanan/kiri atau klik tombol untuk pindah slide.</div>
           </div>
           <div class="imgwrap">
-            <img src="images/slide1.png" alt="Najma membuka presentasi">
-            <div class="imgcap">Letak gambar: kanan</div>
+            <img src="images/slide1.png" alt="Najma membuka presentasi" />
           </div>
         </section>
 
-        <!-- Slide 2 -->
-        <section class="slide" data-pos="center">
+        <section class="slide">
           <div class="left">
             <div class="tag">Slide 2 · Hook</div>
             <h2 class="title">Out of the Box</h2>
             <ul class="bullets">
               <li>Teman-teman biasanya ingat lomba 17-an, upacara, atau pramuka</li>
               <li>Saya berbeda: kita bedah Pancasila di aktivitas presentasi</li>
-              <li>那我们开始吧 · Mari kita mulai</li>
+              <li>那我们开始吧 · Nà wǒmen kāishǐ ba · Mari kita mulai</li>
             </ul>
           </div>
           <div class="imgwrap">
-            <img src="images/slide2.png" alt="Ide kreatif">
-            <div class="imgcap">Letak gambar: tengah atas</div>
+            <img src="images/slide2.png" alt="Ide kreatif" />
           </div>
         </section>
 
-        <!-- Slide 3 -->
-        <section class="slide" data-pos="left">
+        <section class="slide">
           <div class="left">
             <div class="tag">Slide 3 · Sila 1</div>
             <h2 class="title">Sila Pertama · Ketuhanan Yang Maha Esa</h2>
             <ul class="bullets">
-              <li>Memulai dengan Bismillah dan salam</li>
+              <li>Memulai dengan Bismillah dan salam sebagai rasa syukur</li>
               <li>Menghormati keyakinan yang berbeda</li>
-              <li>Menjaga adab Islami</li>
+              <li>Menjaga adab Islami selama berbicara</li>
             </ul>
           </div>
           <div class="imgwrap">
-            <img src="images/slide3.png" alt="Sila 1">
-            <div class="imgcap">Letak gambar: kiri</div>
+            <img src="images/slide3.png" alt="Sila 1" />
           </div>
         </section>
 
-        <!-- Slide 4 -->
-        <section class="slide" data-pos="right">
+        <section class="slide">
           <div class="left">
             <div class="tag">Slide 4 · Sila 2</div>
             <h2 class="title">Sila Kedua · Kemanusiaan yang Adil dan Beradab</h2>
             <ul class="bullets">
-              <li>Tepat waktu</li>
-              <li>Berbahasa santun</li>
-              <li>Menghargai pendapat orang lain</li>
+              <li>Tepat waktu · menghargai waktu audiens</li>
+              <li>Berbahasa santun dan tidak memotong pembicaraan</li>
+              <li>Menghargai pendapat ustadzah dan teman</li>
             </ul>
           </div>
           <div class="imgwrap">
-            <img src="images/slide4.png" alt="Sila 2">
-            <div class="imgcap">Letak gambar: kanan</div>
+            <img src="images/slide4.png" alt="Sila 2" />
           </div>
         </section>
 
-        <!-- Slide 5 -->
-        <section class="slide" data-pos="left">
+        <section class="slide">
           <div class="left">
             <div class="tag">Slide 5 · Sila 3</div>
             <h2 class="title">Sila Ketiga · Persatuan Indonesia</h2>
             <ul class="bullets">
-              <li>Bahasa utama: Bahasa Indonesia</li>
-              <li>Sisipkan bahasa Arab & Mandarin</li>
-              <li>Bangga menyebut sekolah</li>
+              <li>Bahasa utama: Bahasa Indonesia agar semua paham</li>
+              <li>Sisipkan Arab & Cina untuk wawasan, lalu kembali ke Indonesia</li>
+              <li>Bangga menyebut sekolah: SD IT Bina Insan Kamil</li>
             </ul>
           </div>
           <div class="imgwrap">
-            <img src="images/slide5.png" alt="Sila 3">
-            <div class="imgcap">Letak gambar: kiri</div>
+            <img src="images/slide5.png" alt="Sila 3" />
           </div>
         </section>
 
-        <!-- Slide 6 -->
-        <section class="slide" data-pos="right">
+        <section class="slide">
           <div class="left">
             <div class="tag">Slide 6 · Sila 4</div>
             <h2 class="title">Sila Keempat · Kerakyatan & Musyawarah</h2>
             <ul class="bullets">
-              <li>Brainstorming dengan teman</li>
-              <li>Menerima saran guru</li>
-              <li>Mematuhi giliran bicara</li>
+              <li>Brainstorming dengan teman walau tugas individu</li>
+              <li>Menerima saran ustadzah sebelum presentasi</li>
+              <li>Mematuhi giliran presentasi sesuai aturan</li>
             </ul>
           </div>
           <div class="imgwrap">
-            <img src="images/slide6.png" alt="Sila 4">
-            <div class="imgcap">Letak gambar: kanan</div>
+            <img src="images/slide6.png" alt="Sila 4" />
           </div>
         </section>
 
-        <!-- Slide 7 -->
-        <section class="slide" data-pos="left">
+        <section class="slide">
           <div class="left">
             <div class="tag">Slide 7 · Sila 5</div>
             <h2 class="title">Sila Kelima · Keadilan Sosial</h2>
             <ul class="bullets">
-              <li>Gunakan teknologi</li>
-              <li>Fair play</li>
-              <li>Atur waktu bicara</li>
+              <li>Gunakan teknologi: laptop & website agar semua jelas</li>
+              <li>Fair play · tidak mengambil ide orang tanpa izin</li>
+              <li>Atur waktu bicara secara adil</li>
             </ul>
           </div>
           <div class="imgwrap">
-            <img src="images/slide7.png" alt="Sila 5">
-            <div class="imgcap">Letak gambar: kiri</div>
+            <img src="images/slide7.png" alt="Sila 5" />
           </div>
         </section>
 
-        <!-- Slide 8 -->
-        <section class="slide" data-pos="center">
+        <section class="slide">
           <div class="left">
             <div class="tag">Slide 8 · Kesimpulan</div>
             <h2 class="title">Presentasi = Mengamalkan Pancasila</h2>
             <ul class="bullets">
-              <li>Buka dengan salam</li>
-              <li>Bersikap santun</li>
-              <li>Kolaborasi</li>
+              <li>Dari buka dengan salam, bersikap santun, hingga kolaborasi</li>
+              <li>Setiap langkah mengandung nilai Pancasila</li>
+              <li>Pancasila bukan hanya dihafal, tapi diamalkan</li>
             </ul>
           </div>
           <div class="imgwrap">
-            <img src="images/slide8.png" alt="Kesimpulan">
-            <div class="imgcap">Letak gambar: tengah</div>
+            <img src="images/slide8.png" alt="Kesimpulan" />
           </div>
         </section>
 
-        <!-- Slide 9 -->
-        <section class="slide" data-pos="right">
+        <section class="slide">
           <div class="left">
             <div class="tag">Slide 9 · Penutup</div>
             <h2 class="title">Terima kasih</h2>
             <ul class="bullets">
               <li>Syukran jazīlan · Terima kasih banyak</li>
               <li>Assalāmu‘alaikum warahmatullāhi wabarakātuh</li>
-              <li class="note">Bahasa utama: Indonesia</li>
+              <li>Bahasa utama: Indonesia → Pengamalan butir Persatuan Indonesia</li>
             </ul>
           </div>
           <div class="imgwrap">
-            <img src="images/slide9.png" alt="Penutup">
-            <div class="imgcap">Letak gambar: kanan</div>
+            <img src="images/slide9.png" alt="Penutup" />
           </div>
         </section>
-
       </div>
     </main>
 
@@ -251,31 +228,24 @@
     const bar  = document.getElementById('bar');
     const counter = document.getElementById('counter');
     let i = 0;
-
     function show(idx){
       i = Math.max(0, Math.min(slides.length-1, idx));
-      slides.forEach((s, n)=> s.classList.toggle('active', n===i));
-      const pct = ((i+1)/slides.length)*100;
-      bar.style.width = pct + '%';
+      slides.forEach((s, n)=>s.classList.toggle('active', n===i));
+      bar.style.width = ((i+1)/slides.length)*100 + '%';
       counter.textContent = (i+1) + ' / ' + slides.length;
     }
-
     next.addEventListener('click', ()=>show(i+1));
     prev.addEventListener('click', ()=>show(i-1));
-
     window.addEventListener('keydown', (e)=>{
-      if(['ArrowRight','PageDown',' '].includes(e.key)){e.preventDefault(); show(i+1)}
-      if(['ArrowLeft','PageUp','Backspace'].includes(e.key)){e.preventDefault(); show(i-1)}
+      if(e.key==='ArrowRight'||e.key==='PageDown'||e.key===' '){e.preventDefault(); show(i+1)}
+      if(e.key==='ArrowLeft'||e.key==='PageUp'||e.key==='Backspace'){e.preventDefault(); show(i-1)}
     });
-
-    let sx=0, dx=0; const stage = document.getElementById('stage');
+    let sx=0, dx=0; 
+    const stage = document.getElementById('stage');
     stage.addEventListener('touchstart', (e)=>{sx = e.touches[0].clientX});
     stage.addEventListener('touchmove',  (e)=>{dx = e.touches[0].clientX - sx});
     stage.addEventListener('touchend',   ()=>{ if(Math.abs(dx)>40){ dx<0?show(i+1):show(i-1) } dx=0 });
-
-    const params = new URLSearchParams(location.search);
-    const start = parseInt(params.get('s')||'1',10);
-    if(!isNaN(start)) show(start-1);
+    show(0);
   </script>
 </body>
 </html>

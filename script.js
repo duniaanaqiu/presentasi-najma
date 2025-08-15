@@ -26,6 +26,18 @@ document.addEventListener("DOMContentLoaded", () => {
     if(e.key==='ArrowLeft'  || e.key==='PageUp'  || e.key==='Backspace'){
       e.preventDefault(); show(i-1);
     }
+
+    function show(idx) {
+  console.log("Idx:", idx); // Tambah ini
+  i = Math.max(0, Math.min(slides.length-1, idx));
+  slides.forEach((s, n) => {
+    s.classList.toggle('active', n===i);
+  });
+  const pct = ((i+1)/slides.length)*100;
+  bar.style.width = pct + '%';
+  counter.textContent = (i+1) + ' / ' + slides.length;
+    }
+    
   });
 
   // Touch swipe support

@@ -10,17 +10,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
     :root{
-      --bg:#f8fafc; /* slate-50 */
+      --bg:#f8fafc;
       --card:#ffffff;
-      --ink:#0f172a; /* slate-900 */
-      --muted:#475569; /* slate-600 */
-      --accent:#2563eb; /* blue-600 */
-      --ring:#93c5fd; /* blue-300 */
+      --ink:#0f172a;
+      --muted:#475569;
+      --accent:#2563eb;
+      --ring:#93c5fd;
     }
     *{box-sizing:border-box}
     html,body{height:100%;}
     body{
-      margin:0; font-family:"Plus Jakarta Sans",system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell, Noto Sans, sans-serif;
+      margin:0; font-family:"Plus Jakarta Sans",system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
       color:var(--ink); background:linear-gradient(180deg,#f8fafc,#eef2ff); overflow:hidden;
     }
     .app{display:grid; grid-template-rows:auto 1fr auto; height:100%;}
@@ -59,12 +59,9 @@
     .imgwrap{position:relative; border-radius:24px; overflow:hidden; background:#eef2ff; display:grid; place-items:center}
     .imgwrap img{width:100%; height:100%; object-fit:cover}
     .imgcap{position:absolute; left:12px; bottom:12px; background:rgba(0,0,0,.55); color:#fff; padding:6px 10px; border-radius:12px; font-size:12px}
-
     footer{display:flex; align-items:center; justify-content:space-between; padding:12px 18px; gap:10px}
     .progress{height:8px; flex:1; background:rgba(15,23,42,.08); border-radius:999px; overflow:hidden}
     .progress .bar{height:100%; background:var(--accent); width:0%}
-
-    /* Responsive */
     @media (max-width:900px){
       .slide{grid-template-columns:1fr; height:86vh}
       .imgwrap{order:-1; height:40vh}
@@ -84,7 +81,6 @@
     <main>
       <div class="stage" id="stage">
         
-        <!-- SLIDES MULAI -->
         <!-- Slide 1 -->
         <section class="slide active" data-pos="right">
           <div class="left">
@@ -98,8 +94,8 @@
             <div class="note muted">Tekan panah kanan/kiri atau klik tombol untuk pindah slide.</div>
           </div>
           <div class="imgwrap">
-            <img alt="Najma membuka presentasi" src="https://placehold.co/900x600/png?text=Pembukaan" />
-            <div class="imgcap">Letak gambar: kanan (setengah layar)</div>
+            <img src="images/slide1.png" alt="Najma membuka presentasi">
+            <div class="imgcap">Letak gambar: kanan</div>
           </div>
         </section>
 
@@ -111,12 +107,12 @@
             <ul class="bullets">
               <li>Teman-teman biasanya ingat lomba 17-an, upacara, atau pramuka</li>
               <li>Saya berbeda: kita bedah Pancasila di aktivitas presentasi</li>
-              <li>那我们开始吧 · Nà wǒmen kāishǐ ba · Mari kita mulai</li>
+              <li>那我们开始吧 · Mari kita mulai</li>
             </ul>
           </div>
           <div class="imgwrap">
-            <img alt="Ide kreatif" src="https://placehold.co/900x600/png?text=Hook" />
-            <div class="imgcap">Letak gambar: tengah atas (teks di bawah)</div>
+            <img src="images/slide2.png" alt="Ide kreatif">
+            <div class="imgcap">Letak gambar: tengah atas</div>
           </div>
         </section>
 
@@ -126,14 +122,14 @@
             <div class="tag">Slide 3 · Sila 1</div>
             <h2 class="title">Sila Pertama · Ketuhanan Yang Maha Esa</h2>
             <ul class="bullets">
-              <li>Memulai dengan Bismillah dan salam sebagai rasa syukur</li>
+              <li>Memulai dengan Bismillah dan salam</li>
               <li>Menghormati keyakinan yang berbeda</li>
-              <li>Menjaga adab Islami selama berbicara</li>
+              <li>Menjaga adab Islami</li>
             </ul>
           </div>
           <div class="imgwrap">
-            <img alt="Sila 1" src="https://placehold.co/900x600/png?text=Sila+1" />
-            <div class="imgcap">Letak gambar: kiri, teks di kanan</div>
+            <img src="images/slide3.png" alt="Sila 1">
+            <div class="imgcap">Letak gambar: kiri</div>
           </div>
         </section>
 
@@ -143,14 +139,14 @@
             <div class="tag">Slide 4 · Sila 2</div>
             <h2 class="title">Sila Kedua · Kemanusiaan yang Adil dan Beradab</h2>
             <ul class="bullets">
-              <li>Tepat waktu · menghargai waktu audiens</li>
-              <li>Berbahasa santun dan tidak memotong pembicaraan</li>
-              <li>Menghargai pendapat ustadzah dan teman</li>
+              <li>Tepat waktu</li>
+              <li>Berbahasa santun</li>
+              <li>Menghargai pendapat orang lain</li>
             </ul>
           </div>
           <div class="imgwrap">
-            <img alt="Sila 2" src="https://placehold.co/900x600/png?text=Sila+2" />
-            <div class="imgcap">Letak gambar: kanan, teks di kiri</div>
+            <img src="images/slide4.png" alt="Sila 2">
+            <div class="imgcap">Letak gambar: kanan</div>
           </div>
         </section>
 
@@ -160,14 +156,14 @@
             <div class="tag">Slide 5 · Sila 3</div>
             <h2 class="title">Sila Ketiga · Persatuan Indonesia</h2>
             <ul class="bullets">
-              <li>Bahasa utama: Bahasa Indonesia agar semua paham</li>
-              <li>Sisipkan Arab & Cina untuk wawasan, lalu kembali ke Indonesia</li>
-              <li>Bangga menyebut sekolah: SD IT Bina Insan Kamil</li>
+              <li>Bahasa utama: Bahasa Indonesia</li>
+              <li>Sisipkan bahasa Arab & Mandarin</li>
+              <li>Bangga menyebut sekolah</li>
             </ul>
           </div>
           <div class="imgwrap">
-            <img alt="Sila 3" src="https://placehold.co/900x600/png?text=Sila+3" />
-            <div class="imgcap">Letak gambar: kiri, teks di kanan</div>
+            <img src="images/slide5.png" alt="Sila 3">
+            <div class="imgcap">Letak gambar: kiri</div>
           </div>
         </section>
 
@@ -177,14 +173,14 @@
             <div class="tag">Slide 6 · Sila 4</div>
             <h2 class="title">Sila Keempat · Kerakyatan & Musyawarah</h2>
             <ul class="bullets">
-              <li>Brainstorming dengan teman walau tugas individu</li>
-              <li>Menerima saran ustadzah sebelum presentasi</li>
-              <li>Mematuhi giliran presentasi sesuai aturan</li>
+              <li>Brainstorming dengan teman</li>
+              <li>Menerima saran guru</li>
+              <li>Mematuhi giliran bicara</li>
             </ul>
           </div>
           <div class="imgwrap">
-            <img alt="Sila 4" src="https://placehold.co/900x600/png?text=Sila+4" />
-            <div class="imgcap">Letak gambar: kanan, teks di kiri</div>
+            <img src="images/slide6.png" alt="Sila 4">
+            <div class="imgcap">Letak gambar: kanan</div>
           </div>
         </section>
 
@@ -194,14 +190,14 @@
             <div class="tag">Slide 7 · Sila 5</div>
             <h2 class="title">Sila Kelima · Keadilan Sosial</h2>
             <ul class="bullets">
-              <li>Gunakan teknologi: laptop & website agar semua jelas</li>
-              <li>Fair play · tidak mengambil ide orang tanpa izin</li>
-              <li>Atur waktu bicara secara adil</li>
+              <li>Gunakan teknologi</li>
+              <li>Fair play</li>
+              <li>Atur waktu bicara</li>
             </ul>
           </div>
           <div class="imgwrap">
-            <img alt="Sila 5" src="https://placehold.co/900x600/png?text=Sila+5" />
-            <div class="imgcap">Letak gambar: kiri, teks di kanan</div>
+            <img src="images/slide7.png" alt="Sila 5">
+            <div class="imgcap">Letak gambar: kiri</div>
           </div>
         </section>
 
@@ -211,14 +207,14 @@
             <div class="tag">Slide 8 · Kesimpulan</div>
             <h2 class="title">Presentasi = Mengamalkan Pancasila</h2>
             <ul class="bullets">
-              <li>Dari buka dengan salam, bersikap santun, hingga kolaborasi</li>
-              <li>Setiap langkah mengandung nilai Pancasila</li>
-              <li>Pancasila bukan hanya dihafal, tapi diamalkan</li>
+              <li>Buka dengan salam</li>
+              <li>Bersikap santun</li>
+              <li>Kolaborasi</li>
             </ul>
           </div>
           <div class="imgwrap">
-            <img alt="Kesimpulan" src="https://placehold.co/900x600/png?text=Kesimpulan" />
-            <div class="imgcap">Letak gambar: tengah, teks di bawah</div>
+            <img src="images/slide8.png" alt="Kesimpulan">
+            <div class="imgcap">Letak gambar: tengah</div>
           </div>
         </section>
 
@@ -230,15 +226,14 @@
             <ul class="bullets">
               <li>Syukran jazīlan · Terima kasih banyak</li>
               <li>Assalāmu‘alaikum warahmatullāhi wabarakātuh</li>
-              <li class="note">Bahasa utama: Indonesia → Pengamalan butir Persatuan Indonesia</li>
+              <li class="note">Bahasa utama: Indonesia</li>
             </ul>
           </div>
           <div class="imgwrap">
-            <img alt="Penutup" src="https://placehold.co/900x600/png?text=Penutup" />
-            <div class="imgcap">Letak gambar: kanan, teks di kiri</div>
+            <img src="images/slide9.png" alt="Penutup">
+            <div class="imgcap">Letak gambar: kanan</div>
           </div>
         </section>
-        <!-- SLIDES SELESAI -->
 
       </div>
     </main>
@@ -259,7 +254,7 @@
 
     function show(idx){
       i = Math.max(0, Math.min(slides.length-1, idx));
-      slides.forEach((s, n)=>{ s.classList.toggle('active', n===i); });
+      slides.forEach((s, n)=> s.classList.toggle('active', n===i));
       const pct = ((i+1)/slides.length)*100;
       bar.style.width = pct + '%';
       counter.textContent = (i+1) + ' / ' + slides.length;
@@ -269,8 +264,8 @@
     prev.addEventListener('click', ()=>show(i-1));
 
     window.addEventListener('keydown', (e)=>{
-      if(e.key==='ArrowRight' || e.key==='PageDown' || e.key===' '){e.preventDefault(); show(i+1)}
-      if(e.key==='ArrowLeft'  || e.key==='PageUp'  || e.key==='Backspace'){e.preventDefault(); show(i-1)}
+      if(['ArrowRight','PageDown',' '].includes(e.key)){e.preventDefault(); show(i+1)}
+      if(['ArrowLeft','PageUp','Backspace'].includes(e.key)){e.preventDefault(); show(i-1)}
     });
 
     let sx=0, dx=0; const stage = document.getElementById('stage');

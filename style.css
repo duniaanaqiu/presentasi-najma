@@ -42,6 +42,7 @@ header {
   align-items: center;
   gap: 10px;
   font-weight: 800;
+  font-size: 14px; /* Samakan dengan mobile */
   letter-spacing: 0.2px;
 }
 
@@ -70,6 +71,9 @@ button, .ghost {
   color: #fff;
   box-shadow: 0 6px 16px rgba(15, 23, 42, 0.15);
   transition: 0.2s transform ease, 0.2s opacity ease, 0.2s background ease;
+  display: flex;
+  align-items: center; /* Pastikan panah dan teks sebaris */
+  gap: 4px; /* Jarak antara panah dan teks */
 }
 
 button:active {
@@ -215,17 +219,16 @@ footer {
   }
 }
 
-/* New Media Query for Mobile (< 768px) */
+/* Revised Media Query for Mobile (< 767px) */
 @media (max-width: 767px) {
   header {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
     padding: 10px;
   }
 
   .brand {
     font-size: 14px;
-    white-space: normal;
     margin-bottom: 8px;
   }
 
@@ -235,13 +238,14 @@ footer {
   }
 
   .toolbar {
-    flex-direction: column;
-    gap: 6px;
+    flex-direction: row;
+    justify-content: space-between;
     width: 100%;
+    gap: 4px;
   }
 
   button, .ghost {
-    width: 100%;
+    width: auto; /* Kembali ke lebar otomatis */
     padding: 6px 10px;
     font-size: 14px;
   }

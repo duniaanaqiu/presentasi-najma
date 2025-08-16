@@ -42,7 +42,7 @@ header {
   align-items: center;
   gap: 10px;
   font-weight: 800;
-  font-size: 14px; /* Samakan dengan mobile */
+  font-size: 14px;
   letter-spacing: 0.2px;
 }
 
@@ -72,8 +72,8 @@ button, .ghost {
   box-shadow: 0 6px 16px rgba(15, 23, 42, 0.15);
   transition: 0.2s transform ease, 0.2s opacity ease, 0.2s background ease;
   display: flex;
-  align-items: center; /* Pastikan panah dan teks sebaris */
-  gap: 4px; /* Jarak antara panah dan teks */
+  align-items: center;
+  gap: 4px;
 }
 
 button:active {
@@ -175,7 +175,9 @@ main {
   background: #eef2ff;
   display: grid;
   place-items: center;
-  height: 100%;
+  aspect-ratio: 16 / 9; /* Tetapkan rasio 16:9 */
+  width: 100%; /* Isi lebar container */
+  height: auto; /* Biar proporsional */
 }
 
 .imgwrap img {
@@ -215,7 +217,8 @@ footer {
   }
   .imgwrap {
     order: -1;
-    height: 40vh;
+    aspect-ratio: 16 / 9; /* Tetapkan rasio 16:9 */
+    height: auto; /* Biar proporsional */
   }
 }
 
@@ -245,7 +248,7 @@ footer {
   }
 
   button, .ghost {
-    width: auto; /* Kembali ke lebar otomatis */
+    width: auto;
     padding: 6px 10px;
     font-size: 14px;
   }
@@ -272,12 +275,13 @@ footer {
   }
 
   .imgwrap {
-    height: 30vh;
+    height: auto; /* Hapus 30vh, pakai aspect-ratio */
     order: -1;
+    aspect-ratio: 16 / 9; /* Tetapkan rasio 16:9 */
   }
 
   .imgwrap img {
-    object-fit: contain;
+    object-fit: contain; /* Bisa ganti ke cover kalau mau penuh */
   }
 
   footer {

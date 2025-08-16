@@ -175,9 +175,9 @@ main {
   background: #eef2ff;
   display: grid;
   place-items: center;
-  aspect-ratio: 16 / 9; /* Tetapkan rasio 16:9 */
-  width: 100%; /* Isi lebar container */
-  height: auto; /* Biar proporsional */
+  aspect-ratio: 3 / 4; /* Ubah ke rasio 3:4 */
+  width: 100%;
+  height: auto;
 }
 
 .imgwrap img {
@@ -217,8 +217,8 @@ footer {
   }
   .imgwrap {
     order: -1;
-    aspect-ratio: 3 / 4; /* Tetapkan rasio 16:9 */
-    height: auto; /* Biar proporsional */
+    aspect-ratio: 3 / 4; /* Ubah ke rasio 3:4 */
+    height: auto;
   }
 }
 
@@ -275,13 +275,13 @@ footer {
   }
 
   .imgwrap {
-    height: auto; /* Hapus 30vh, pakai aspect-ratio */
+    height: auto;
     order: -1;
-    aspect-ratio: 16 / 9; /* Tetapkan rasio 16:9 */
+    aspect-ratio: 3 / 4; /* Ubah ke rasio 3:4 */
   }
 
   .imgwrap img {
-    object-fit: contain; /* Bisa ganti ke cover kalau mau penuh */
+    object-fit: cover;
   }
 
   footer {

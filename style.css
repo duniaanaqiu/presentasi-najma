@@ -217,7 +217,7 @@ footer {
   }
   .imgwrap {
     order: -1;
-    aspect-ratio: 16 / 9; /* Tetapkan rasio 16:9 */
+    aspect-ratio: 3 / 4; /* Tetapkan rasio 16:9 */
     height: auto; /* Biar proporsional */
   }
 }

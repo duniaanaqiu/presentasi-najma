@@ -175,15 +175,16 @@ main {
   background: #eef2ff;
   display: grid;
   place-items: center;
-  aspect-ratio: 3 / 4; /* Ubah ke rasio 3:4 */
+  aspect-ratio: 3 / 4; /* Tetap 3:4 */
   width: 100%;
   height: auto;
+  max-height: 100%; /* Batasi tinggi agar nggak mendorong */
 }
 
 .imgwrap img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain; /* Ganti ke contain biar nggak potong */
   display: block;
 }
 
@@ -217,8 +218,9 @@ footer {
   }
   .imgwrap {
     order: -1;
-    aspect-ratio: 3 / 4; /* Ubah ke rasio 3:4 */
+    aspect-ratio: 3 / 4;
     height: auto;
+    max-height: 40vh; /* Batasi tinggi di tablet */
   }
 }
 
@@ -258,6 +260,7 @@ footer {
     height: auto;
     padding: 15px;
     gap: 12px;
+    overflow-y: auto; /* Tambah scroll kalau konten ke luar */
   }
 
   .tag {
@@ -277,11 +280,12 @@ footer {
   .imgwrap {
     height: auto;
     order: -1;
-    aspect-ratio: 3 / 4; /* Ubah ke rasio 3:4 */
+    aspect-ratio: 3 / 4;
+    max-height: 35vh; /* Batasi tinggi di mobile */
   }
 
   .imgwrap img {
-    object-fit: cover;
+    object-fit: contain;
   }
 
   footer {
